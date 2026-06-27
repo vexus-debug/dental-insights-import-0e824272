@@ -8,7 +8,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 
-export const Route = createFileRoute("/billing")({
+export const Route = createFileRoute("/clinic/billing")({
   head: () => ({ meta: [{ title: "Billing — Dentallogue" }] }),
   component: BillingPage,
 });

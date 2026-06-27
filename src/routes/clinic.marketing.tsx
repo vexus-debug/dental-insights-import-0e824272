@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
 
-export const Route = createFileRoute("/marketing")({
+export const Route = createFileRoute("/clinic/marketing")({
   head: () => ({ meta: [{ title: "Marketing — Dentallogue" }] }),
   component: MarketingPage,
 });

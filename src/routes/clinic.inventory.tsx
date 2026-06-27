@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export const Route = createFileRoute("/inventory")({
+export const Route = createFileRoute("/clinic/inventory")({
   head: () => ({ meta: [{ title: "Inventory — Dentallogue" }] }),
   component: InventoryPage,
 });

@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export const Route = createFileRoute("/consent-forms")({
+export const Route = createFileRoute("/clinic/consent-forms")({
   head: () => ({ meta: [{ title: "Consent Forms — Dentallogue" }] }),
   component: ConsentPage,
 });

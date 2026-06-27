@@ -6,7 +6,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip } from "recharts";
 
-export const Route = createFileRoute("/reports")({
+export const Route = createFileRoute("/clinic/reports")({
   head: () => ({ meta: [{ title: "Reports — Dentallogue" }] }),
   component: ReportsPage,
 });

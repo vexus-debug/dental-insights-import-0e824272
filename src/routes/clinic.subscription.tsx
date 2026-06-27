@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 
-export const Route = createFileRoute("/subscription")({
+export const Route = createFileRoute("/clinic/subscription")({
   head: () => ({ meta: [{ title: "Subscription — Dentallogue" }] }),
   component: SubscriptionPage,
 });

@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-export const Route = createFileRoute("/dental-chart")({
+export const Route = createFileRoute("/clinic/dental-chart")({
   head: () => ({ meta: [{ title: "Dental Chart — Dentallogue" }] }),
   component: DentalChartPage,
 });

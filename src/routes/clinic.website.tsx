@@ -9,7 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-export const Route = createFileRoute("/website")({
+export const Route = createFileRoute("/clinic/website")({
   head: () => ({ meta: [{ title: "Website — Dentallogue" }] }),
   component: WebsitePage,
 });

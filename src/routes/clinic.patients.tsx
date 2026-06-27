@@ -14,7 +14,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogT
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-export const Route = createFileRoute("/patients")({
+export const Route = createFileRoute("/clinic/patients")({
   head: () => ({ meta: [{ title: "Patients — Dentallogue" }] }),
   component: PatientsPage,
 });

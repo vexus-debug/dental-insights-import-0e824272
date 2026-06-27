@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogT
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-export const Route = createFileRoute("/appointments")({
+export const Route = createFileRoute("/clinic/appointments")({
   head: () => ({ meta: [{ title: "Appointments — Dentallogue" }] }),
   component: AppointmentsPage,
 });

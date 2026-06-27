@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Switch } from "@/components/ui/switch";
 
-export const Route = createFileRoute("/users")({
+export const Route = createFileRoute("/clinic/users")({
   head: () => ({ meta: [{ title: "Users & Roles — Dentallogue" }] }),
   component: UsersPage,
 });

@@ -4,7 +4,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AreaChart, Area, BarChart, Bar, LineChart, Line, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip, PieChart, Pie, Cell } from "recharts";
 
-export const Route = createFileRoute("/analytics")({
+export const Route = createFileRoute("/clinic/analytics")({
   head: () => ({ meta: [{ title: "Analytics — Dentallogue" }] }),
   component: AnalyticsPage,
 });
