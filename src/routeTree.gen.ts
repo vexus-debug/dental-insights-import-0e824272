@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ClinicRouteImport } from './routes/clinic'
 import { Route as ClinicIndexRouteImport } from './routes/clinic.index'
 import { Route as ClinicWebsiteRouteImport } from './routes/clinic.website'
 import { Route as ClinicUsersRouteImport } from './routes/clinic.users'
@@ -34,128 +35,134 @@ import { Route as ClinicBillingRouteImport } from './routes/clinic.billing'
 import { Route as ClinicAppointmentsRouteImport } from './routes/clinic.appointments'
 import { Route as ClinicAnalyticsRouteImport } from './routes/clinic.analytics'
 
-const ClinicIndexRoute = ClinicIndexRouteImport.update({
-  id: '/clinic/',
-  path: '/clinic/',
+const ClinicRoute = ClinicRouteImport.update({
+  id: '/clinic',
+  path: '/clinic',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ClinicIndexRoute = ClinicIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicWebsiteRoute = ClinicWebsiteRouteImport.update({
-  id: '/clinic/website',
-  path: '/clinic/website',
-  getParentRoute: () => rootRouteImport,
+  id: '/website',
+  path: '/website',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicUsersRoute = ClinicUsersRouteImport.update({
-  id: '/clinic/users',
-  path: '/clinic/users',
-  getParentRoute: () => rootRouteImport,
+  id: '/users',
+  path: '/users',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicTreatmentPlansRoute = ClinicTreatmentPlansRouteImport.update({
-  id: '/clinic/treatment-plans',
-  path: '/clinic/treatment-plans',
-  getParentRoute: () => rootRouteImport,
+  id: '/treatment-plans',
+  path: '/treatment-plans',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicSubscriptionRoute = ClinicSubscriptionRouteImport.update({
-  id: '/clinic/subscription',
-  path: '/clinic/subscription',
-  getParentRoute: () => rootRouteImport,
+  id: '/subscription',
+  path: '/subscription',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicStaffRoute = ClinicStaffRouteImport.update({
-  id: '/clinic/staff',
-  path: '/clinic/staff',
-  getParentRoute: () => rootRouteImport,
+  id: '/staff',
+  path: '/staff',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicSettingsRoute = ClinicSettingsRouteImport.update({
-  id: '/clinic/settings',
-  path: '/clinic/settings',
-  getParentRoute: () => rootRouteImport,
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicReportsRoute = ClinicReportsRouteImport.update({
-  id: '/clinic/reports',
-  path: '/clinic/reports',
-  getParentRoute: () => rootRouteImport,
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicQueueRoute = ClinicQueueRouteImport.update({
-  id: '/clinic/queue',
-  path: '/clinic/queue',
-  getParentRoute: () => rootRouteImport,
+  id: '/queue',
+  path: '/queue',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicPatientsRoute = ClinicPatientsRouteImport.update({
-  id: '/clinic/patients',
-  path: '/clinic/patients',
-  getParentRoute: () => rootRouteImport,
+  id: '/patients',
+  path: '/patients',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicPatientPortalRoute = ClinicPatientPortalRouteImport.update({
-  id: '/clinic/patient-portal',
-  path: '/clinic/patient-portal',
-  getParentRoute: () => rootRouteImport,
+  id: '/patient-portal',
+  path: '/patient-portal',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicMarketingRoute = ClinicMarketingRouteImport.update({
-  id: '/clinic/marketing',
-  path: '/clinic/marketing',
-  getParentRoute: () => rootRouteImport,
+  id: '/marketing',
+  path: '/marketing',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicLaboratoryRoute = ClinicLaboratoryRouteImport.update({
-  id: '/clinic/laboratory',
-  path: '/clinic/laboratory',
-  getParentRoute: () => rootRouteImport,
+  id: '/laboratory',
+  path: '/laboratory',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicInventoryRoute = ClinicInventoryRouteImport.update({
-  id: '/clinic/inventory',
-  path: '/clinic/inventory',
-  getParentRoute: () => rootRouteImport,
+  id: '/inventory',
+  path: '/inventory',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicInsuranceRoute = ClinicInsuranceRouteImport.update({
-  id: '/clinic/insurance',
-  path: '/clinic/insurance',
-  getParentRoute: () => rootRouteImport,
+  id: '/insurance',
+  path: '/insurance',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicImagingRoute = ClinicImagingRouteImport.update({
-  id: '/clinic/imaging',
-  path: '/clinic/imaging',
-  getParentRoute: () => rootRouteImport,
+  id: '/imaging',
+  path: '/imaging',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicDocumentsRoute = ClinicDocumentsRouteImport.update({
-  id: '/clinic/documents',
-  path: '/clinic/documents',
-  getParentRoute: () => rootRouteImport,
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicDentalChartRoute = ClinicDentalChartRouteImport.update({
-  id: '/clinic/dental-chart',
-  path: '/clinic/dental-chart',
-  getParentRoute: () => rootRouteImport,
+  id: '/dental-chart',
+  path: '/dental-chart',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicConsentFormsRoute = ClinicConsentFormsRouteImport.update({
-  id: '/clinic/consent-forms',
-  path: '/clinic/consent-forms',
-  getParentRoute: () => rootRouteImport,
+  id: '/consent-forms',
+  path: '/consent-forms',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicCommunicationRoute = ClinicCommunicationRouteImport.update({
-  id: '/clinic/communication',
-  path: '/clinic/communication',
-  getParentRoute: () => rootRouteImport,
+  id: '/communication',
+  path: '/communication',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicClinicalRecordsRoute = ClinicClinicalRecordsRouteImport.update({
-  id: '/clinic/clinical-records',
-  path: '/clinic/clinical-records',
-  getParentRoute: () => rootRouteImport,
+  id: '/clinical-records',
+  path: '/clinical-records',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicBillingRoute = ClinicBillingRouteImport.update({
-  id: '/clinic/billing',
-  path: '/clinic/billing',
-  getParentRoute: () => rootRouteImport,
+  id: '/billing',
+  path: '/billing',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicAppointmentsRoute = ClinicAppointmentsRouteImport.update({
-  id: '/clinic/appointments',
-  path: '/clinic/appointments',
-  getParentRoute: () => rootRouteImport,
+  id: '/appointments',
+  path: '/appointments',
+  getParentRoute: () => ClinicRoute,
 } as any)
 const ClinicAnalyticsRoute = ClinicAnalyticsRouteImport.update({
-  id: '/clinic/analytics',
-  path: '/clinic/analytics',
-  getParentRoute: () => rootRouteImport,
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => ClinicRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/clinic': typeof ClinicRouteWithChildren
   '/clinic/analytics': typeof ClinicAnalyticsRoute
   '/clinic/appointments': typeof ClinicAppointmentsRoute
   '/clinic/billing': typeof ClinicBillingRoute
@@ -209,6 +216,7 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/clinic': typeof ClinicRouteWithChildren
   '/clinic/analytics': typeof ClinicAnalyticsRoute
   '/clinic/appointments': typeof ClinicAppointmentsRoute
   '/clinic/billing': typeof ClinicBillingRoute
@@ -237,6 +245,7 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
+    | '/clinic'
     | '/clinic/analytics'
     | '/clinic/appointments'
     | '/clinic/billing'
@@ -289,6 +298,7 @@ export interface FileRouteTypes {
     | '/clinic'
   id:
     | '__root__'
+    | '/clinic'
     | '/clinic/analytics'
     | '/clinic/appointments'
     | '/clinic/billing'
@@ -316,6 +326,190 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  ClinicRoute: typeof ClinicRouteWithChildren
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/clinic': {
+      id: '/clinic'
+      path: '/clinic'
+      fullPath: '/clinic'
+      preLoaderRoute: typeof ClinicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinic/': {
+      id: '/clinic/'
+      path: '/'
+      fullPath: '/clinic/'
+      preLoaderRoute: typeof ClinicIndexRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/website': {
+      id: '/clinic/website'
+      path: '/website'
+      fullPath: '/clinic/website'
+      preLoaderRoute: typeof ClinicWebsiteRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/users': {
+      id: '/clinic/users'
+      path: '/users'
+      fullPath: '/clinic/users'
+      preLoaderRoute: typeof ClinicUsersRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/treatment-plans': {
+      id: '/clinic/treatment-plans'
+      path: '/treatment-plans'
+      fullPath: '/clinic/treatment-plans'
+      preLoaderRoute: typeof ClinicTreatmentPlansRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/subscription': {
+      id: '/clinic/subscription'
+      path: '/subscription'
+      fullPath: '/clinic/subscription'
+      preLoaderRoute: typeof ClinicSubscriptionRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/staff': {
+      id: '/clinic/staff'
+      path: '/staff'
+      fullPath: '/clinic/staff'
+      preLoaderRoute: typeof ClinicStaffRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/settings': {
+      id: '/clinic/settings'
+      path: '/settings'
+      fullPath: '/clinic/settings'
+      preLoaderRoute: typeof ClinicSettingsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/reports': {
+      id: '/clinic/reports'
+      path: '/reports'
+      fullPath: '/clinic/reports'
+      preLoaderRoute: typeof ClinicReportsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/queue': {
+      id: '/clinic/queue'
+      path: '/queue'
+      fullPath: '/clinic/queue'
+      preLoaderRoute: typeof ClinicQueueRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/patients': {
+      id: '/clinic/patients'
+      path: '/patients'
+      fullPath: '/clinic/patients'
+      preLoaderRoute: typeof ClinicPatientsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/patient-portal': {
+      id: '/clinic/patient-portal'
+      path: '/patient-portal'
+      fullPath: '/clinic/patient-portal'
+      preLoaderRoute: typeof ClinicPatientPortalRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/marketing': {
+      id: '/clinic/marketing'
+      path: '/marketing'
+      fullPath: '/clinic/marketing'
+      preLoaderRoute: typeof ClinicMarketingRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/laboratory': {
+      id: '/clinic/laboratory'
+      path: '/laboratory'
+      fullPath: '/clinic/laboratory'
+      preLoaderRoute: typeof ClinicLaboratoryRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/inventory': {
+      id: '/clinic/inventory'
+      path: '/inventory'
+      fullPath: '/clinic/inventory'
+      preLoaderRoute: typeof ClinicInventoryRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/insurance': {
+      id: '/clinic/insurance'
+      path: '/insurance'
+      fullPath: '/clinic/insurance'
+      preLoaderRoute: typeof ClinicInsuranceRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/imaging': {
+      id: '/clinic/imaging'
+      path: '/imaging'
+      fullPath: '/clinic/imaging'
+      preLoaderRoute: typeof ClinicImagingRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/documents': {
+      id: '/clinic/documents'
+      path: '/documents'
+      fullPath: '/clinic/documents'
+      preLoaderRoute: typeof ClinicDocumentsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/dental-chart': {
+      id: '/clinic/dental-chart'
+      path: '/dental-chart'
+      fullPath: '/clinic/dental-chart'
+      preLoaderRoute: typeof ClinicDentalChartRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/consent-forms': {
+      id: '/clinic/consent-forms'
+      path: '/consent-forms'
+      fullPath: '/clinic/consent-forms'
+      preLoaderRoute: typeof ClinicConsentFormsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/communication': {
+      id: '/clinic/communication'
+      path: '/communication'
+      fullPath: '/clinic/communication'
+      preLoaderRoute: typeof ClinicCommunicationRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/clinical-records': {
+      id: '/clinic/clinical-records'
+      path: '/clinical-records'
+      fullPath: '/clinic/clinical-records'
+      preLoaderRoute: typeof ClinicClinicalRecordsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/billing': {
+      id: '/clinic/billing'
+      path: '/billing'
+      fullPath: '/clinic/billing'
+      preLoaderRoute: typeof ClinicBillingRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/appointments': {
+      id: '/clinic/appointments'
+      path: '/appointments'
+      fullPath: '/clinic/appointments'
+      preLoaderRoute: typeof ClinicAppointmentsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+    '/clinic/analytics': {
+      id: '/clinic/analytics'
+      path: '/analytics'
+      fullPath: '/clinic/analytics'
+      preLoaderRoute: typeof ClinicAnalyticsRouteImport
+      parentRoute: typeof ClinicRoute
+    }
+  }
+}
+
+interface ClinicRouteChildren {
   ClinicAnalyticsRoute: typeof ClinicAnalyticsRoute
   ClinicAppointmentsRoute: typeof ClinicAppointmentsRoute
   ClinicBillingRoute: typeof ClinicBillingRoute
@@ -342,180 +536,7 @@ export interface RootRouteChildren {
   ClinicIndexRoute: typeof ClinicIndexRoute
 }
 
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/clinic/': {
-      id: '/clinic/'
-      path: '/clinic'
-      fullPath: '/clinic/'
-      preLoaderRoute: typeof ClinicIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/website': {
-      id: '/clinic/website'
-      path: '/clinic/website'
-      fullPath: '/clinic/website'
-      preLoaderRoute: typeof ClinicWebsiteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/users': {
-      id: '/clinic/users'
-      path: '/clinic/users'
-      fullPath: '/clinic/users'
-      preLoaderRoute: typeof ClinicUsersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/treatment-plans': {
-      id: '/clinic/treatment-plans'
-      path: '/clinic/treatment-plans'
-      fullPath: '/clinic/treatment-plans'
-      preLoaderRoute: typeof ClinicTreatmentPlansRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/subscription': {
-      id: '/clinic/subscription'
-      path: '/clinic/subscription'
-      fullPath: '/clinic/subscription'
-      preLoaderRoute: typeof ClinicSubscriptionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/staff': {
-      id: '/clinic/staff'
-      path: '/clinic/staff'
-      fullPath: '/clinic/staff'
-      preLoaderRoute: typeof ClinicStaffRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/settings': {
-      id: '/clinic/settings'
-      path: '/clinic/settings'
-      fullPath: '/clinic/settings'
-      preLoaderRoute: typeof ClinicSettingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/reports': {
-      id: '/clinic/reports'
-      path: '/clinic/reports'
-      fullPath: '/clinic/reports'
-      preLoaderRoute: typeof ClinicReportsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/queue': {
-      id: '/clinic/queue'
-      path: '/clinic/queue'
-      fullPath: '/clinic/queue'
-      preLoaderRoute: typeof ClinicQueueRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/patients': {
-      id: '/clinic/patients'
-      path: '/clinic/patients'
-      fullPath: '/clinic/patients'
-      preLoaderRoute: typeof ClinicPatientsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/patient-portal': {
-      id: '/clinic/patient-portal'
-      path: '/clinic/patient-portal'
-      fullPath: '/clinic/patient-portal'
-      preLoaderRoute: typeof ClinicPatientPortalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/marketing': {
-      id: '/clinic/marketing'
-      path: '/clinic/marketing'
-      fullPath: '/clinic/marketing'
-      preLoaderRoute: typeof ClinicMarketingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/laboratory': {
-      id: '/clinic/laboratory'
-      path: '/clinic/laboratory'
-      fullPath: '/clinic/laboratory'
-      preLoaderRoute: typeof ClinicLaboratoryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/inventory': {
-      id: '/clinic/inventory'
-      path: '/clinic/inventory'
-      fullPath: '/clinic/inventory'
-      preLoaderRoute: typeof ClinicInventoryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/insurance': {
-      id: '/clinic/insurance'
-      path: '/clinic/insurance'
-      fullPath: '/clinic/insurance'
-      preLoaderRoute: typeof ClinicInsuranceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/imaging': {
-      id: '/clinic/imaging'
-      path: '/clinic/imaging'
-      fullPath: '/clinic/imaging'
-      preLoaderRoute: typeof ClinicImagingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/documents': {
-      id: '/clinic/documents'
-      path: '/clinic/documents'
-      fullPath: '/clinic/documents'
-      preLoaderRoute: typeof ClinicDocumentsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/dental-chart': {
-      id: '/clinic/dental-chart'
-      path: '/clinic/dental-chart'
-      fullPath: '/clinic/dental-chart'
-      preLoaderRoute: typeof ClinicDentalChartRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/consent-forms': {
-      id: '/clinic/consent-forms'
-      path: '/clinic/consent-forms'
-      fullPath: '/clinic/consent-forms'
-      preLoaderRoute: typeof ClinicConsentFormsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/communication': {
-      id: '/clinic/communication'
-      path: '/clinic/communication'
-      fullPath: '/clinic/communication'
-      preLoaderRoute: typeof ClinicCommunicationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/clinical-records': {
-      id: '/clinic/clinical-records'
-      path: '/clinic/clinical-records'
-      fullPath: '/clinic/clinical-records'
-      preLoaderRoute: typeof ClinicClinicalRecordsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/billing': {
-      id: '/clinic/billing'
-      path: '/clinic/billing'
-      fullPath: '/clinic/billing'
-      preLoaderRoute: typeof ClinicBillingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/appointments': {
-      id: '/clinic/appointments'
-      path: '/clinic/appointments'
-      fullPath: '/clinic/appointments'
-      preLoaderRoute: typeof ClinicAppointmentsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinic/analytics': {
-      id: '/clinic/analytics'
-      path: '/clinic/analytics'
-      fullPath: '/clinic/analytics'
-      preLoaderRoute: typeof ClinicAnalyticsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-  }
-}
-
-const rootRouteChildren: RootRouteChildren = {
+const ClinicRouteChildren: ClinicRouteChildren = {
   ClinicAnalyticsRoute: ClinicAnalyticsRoute,
   ClinicAppointmentsRoute: ClinicAppointmentsRoute,
   ClinicBillingRoute: ClinicBillingRoute,
@@ -540,6 +561,13 @@ const rootRouteChildren: RootRouteChildren = {
   ClinicUsersRoute: ClinicUsersRoute,
   ClinicWebsiteRoute: ClinicWebsiteRoute,
   ClinicIndexRoute: ClinicIndexRoute,
+}
+
+const ClinicRouteWithChildren =
+  ClinicRoute._addFileChildren(ClinicRouteChildren)
+
+const rootRouteChildren: RootRouteChildren = {
+  ClinicRoute: ClinicRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

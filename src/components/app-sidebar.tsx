@@ -47,64 +47,64 @@ type NavGroup = { label: string; items: NavItem[] };
 const groups: NavGroup[] = [
   {
     label: "Overview",
-    items: [{ title: "Dashboard", url: "/", icon: LayoutDashboard }],
+    items: [{ title: "Dashboard", url: "/clinic", icon: LayoutDashboard }],
   },
   {
     label: "Patients",
     items: [
-      { title: "Patients", url: "/patients", icon: Users },
-      { title: "Appointments", url: "/appointments", icon: CalendarDays },
-      { title: "Queue", url: "/queue", icon: ListChecks },
+      { title: "Patients", url: "/clinic/patients", icon: Users },
+      { title: "Appointments", url: "/clinic/appointments", icon: CalendarDays },
+      { title: "Queue", url: "/clinic/queue", icon: ListChecks },
     ],
   },
   {
     label: "Clinical",
     items: [
-      { title: "Dental Chart", url: "/dental-chart", icon: Stethoscope },
-      { title: "Treatment Plans", url: "/treatment-plans", icon: ClipboardList },
-      { title: "Clinical Records", url: "/clinical-records", icon: FileText },
-      { title: "Imaging", url: "/imaging", icon: ScanLine },
-      { title: "Laboratory", url: "/laboratory", icon: FlaskConical },
+      { title: "Dental Chart", url: "/clinic/dental-chart", icon: Stethoscope },
+      { title: "Treatment Plans", url: "/clinic/treatment-plans", icon: ClipboardList },
+      { title: "Clinical Records", url: "/clinic/clinical-records", icon: FileText },
+      { title: "Imaging", url: "/clinic/imaging", icon: ScanLine },
+      { title: "Laboratory", url: "/clinic/laboratory", icon: FlaskConical },
     ],
   },
   {
     label: "Finance",
     items: [
-      { title: "Billing", url: "/billing", icon: Receipt },
-      { title: "Insurance", url: "/insurance", icon: ShieldCheck },
+      { title: "Billing", url: "/clinic/billing", icon: Receipt },
+      { title: "Insurance", url: "/clinic/insurance", icon: ShieldCheck },
     ],
   },
   {
     label: "Operations",
     items: [
-      { title: "Inventory", url: "/inventory", icon: Package },
-      { title: "Staff", url: "/staff", icon: UserCog },
-      { title: "Documents", url: "/documents", icon: Folder },
-      { title: "Consent Forms", url: "/consent-forms", icon: FileSignature },
+      { title: "Inventory", url: "/clinic/inventory", icon: Package },
+      { title: "Staff", url: "/clinic/staff", icon: UserCog },
+      { title: "Documents", url: "/clinic/documents", icon: Folder },
+      { title: "Consent Forms", url: "/clinic/consent-forms", icon: FileSignature },
     ],
   },
   {
     label: "Growth",
     items: [
-      { title: "Website", url: "/website", icon: Globe },
-      { title: "Patient Portal", url: "/patient-portal", icon: Smartphone },
-      { title: "Communication", url: "/communication", icon: MessageSquare },
-      { title: "Marketing", url: "/marketing", icon: Megaphone },
+      { title: "Website", url: "/clinic/website", icon: Globe },
+      { title: "Patient Portal", url: "/clinic/patient-portal", icon: Smartphone },
+      { title: "Communication", url: "/clinic/communication", icon: MessageSquare },
+      { title: "Marketing", url: "/clinic/marketing", icon: Megaphone },
     ],
   },
   {
     label: "Insights",
     items: [
-      { title: "Reports", url: "/reports", icon: BarChart3 },
-      { title: "Analytics", url: "/analytics", icon: TrendingUp },
+      { title: "Reports", url: "/clinic/reports", icon: BarChart3 },
+      { title: "Analytics", url: "/clinic/analytics", icon: TrendingUp },
     ],
   },
   {
     label: "Settings",
     items: [
-      { title: "Clinic Settings", url: "/settings", icon: Settings },
-      { title: "Users & Roles", url: "/users", icon: KeyRound },
-      { title: "Subscription", url: "/subscription", icon: CreditCard },
+      { title: "Clinic Settings", url: "/clinic/settings", icon: Settings },
+      { title: "Users & Roles", url: "/clinic/users", icon: KeyRound },
+      { title: "Subscription", url: "/clinic/subscription", icon: CreditCard },
     ],
   },
 ];
@@ -116,7 +116,7 @@ export function AppSidebar() {
     <Sidebar collapsible="icon" className="border-r">
       <SidebarHeader className="border-b border-sidebar-border">
         <Link
-          to="/"
+          to="/clinic"
           className="flex items-center gap-2.5 px-2 py-2 group-data-[collapsible=icon]:justify-center"
         >
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
@@ -143,8 +143,8 @@ export function AppSidebar() {
               <SidebarMenu>
                 {group.items.map((item) => {
                   const active =
-                    item.url === "/"
-                      ? pathname === "/"
+                    item.url === "/clinic"
+                      ? pathname === "/clinic" || pathname === "/clinic/"
                       : pathname === item.url || pathname.startsWith(item.url + "/");
                   return (
                     <SidebarMenuItem key={item.url}>
