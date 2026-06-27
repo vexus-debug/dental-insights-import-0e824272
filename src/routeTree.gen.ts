@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ClinicRouteImport } from './routes/clinic'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as ClinicIndexRouteImport } from './routes/clinic.index'
 import { Route as ClinicWebsiteRouteImport } from './routes/clinic.website'
 import { Route as ClinicUsersRouteImport } from './routes/clinic.users'
@@ -38,6 +39,11 @@ import { Route as ClinicAnalyticsRouteImport } from './routes/clinic.analytics'
 const ClinicRoute = ClinicRouteImport.update({
   id: '/clinic',
   path: '/clinic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClinicIndexRoute = ClinicIndexRouteImport.update({
@@ -162,6 +168,7 @@ const ClinicAnalyticsRoute = ClinicAnalyticsRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/admin': typeof AdminRoute
   '/clinic': typeof ClinicRouteWithChildren
   '/clinic/analytics': typeof ClinicAnalyticsRoute
   '/clinic/appointments': typeof ClinicAppointmentsRoute
@@ -189,6 +196,7 @@ export interface FileRoutesByFullPath {
   '/clinic/': typeof ClinicIndexRoute
 }
 export interface FileRoutesByTo {
+  '/admin': typeof AdminRoute
   '/clinic/analytics': typeof ClinicAnalyticsRoute
   '/clinic/appointments': typeof ClinicAppointmentsRoute
   '/clinic/billing': typeof ClinicBillingRoute
@@ -216,6 +224,7 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/admin': typeof AdminRoute
   '/clinic': typeof ClinicRouteWithChildren
   '/clinic/analytics': typeof ClinicAnalyticsRoute
   '/clinic/appointments': typeof ClinicAppointmentsRoute
@@ -245,6 +254,7 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
+    | '/admin'
     | '/clinic'
     | '/clinic/analytics'
     | '/clinic/appointments'
@@ -272,6 +282,7 @@ export interface FileRouteTypes {
     | '/clinic/'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/admin'
     | '/clinic/analytics'
     | '/clinic/appointments'
     | '/clinic/billing'
@@ -298,6 +309,7 @@ export interface FileRouteTypes {
     | '/clinic'
   id:
     | '__root__'
+    | '/admin'
     | '/clinic'
     | '/clinic/analytics'
     | '/clinic/appointments'
@@ -326,6 +338,7 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  AdminRoute: typeof AdminRoute
   ClinicRoute: typeof ClinicRouteWithChildren
 }
 
@@ -336,6 +349,13 @@ declare module '@tanstack/react-router' {
       path: '/clinic'
       fullPath: '/clinic'
       preLoaderRoute: typeof ClinicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/clinic/': {
@@ -567,6 +587,7 @@ const ClinicRouteWithChildren =
   ClinicRoute._addFileChildren(ClinicRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
+  AdminRoute: AdminRoute,
   ClinicRoute: ClinicRouteWithChildren,
 }
 export const routeTree = rootRouteImport
