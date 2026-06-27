@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export const Route = createFileRoute("/insurance")({
+export const Route = createFileRoute("/clinic/insurance")({
   head: () => ({ meta: [{ title: "Insurance — Dentallogue" }] }),
   component: InsurancePage,
 });

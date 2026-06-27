@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
-export const Route = createFileRoute("/clinical-records")({
+export const Route = createFileRoute("/clinic/clinical-records")({
   head: () => ({ meta: [{ title: "Clinical Records — Dentallogue" }] }),
   component: RecordsPage,
 });

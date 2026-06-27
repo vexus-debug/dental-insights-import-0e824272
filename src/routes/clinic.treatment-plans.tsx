@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export const Route = createFileRoute("/treatment-plans")({
+export const Route = createFileRoute("/clinic/treatment-plans")({
   head: () => ({ meta: [{ title: "Treatment Plans — Dentallogue" }] }),
   component: TreatmentPlansPage,
 });

@@ -8,7 +8,7 @@ import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export const Route = createFileRoute("/settings")({
+export const Route = createFileRoute("/clinic/settings")({
   head: () => ({ meta: [{ title: "Settings — Dentallogue" }] }),
   component: SettingsPage,
 });

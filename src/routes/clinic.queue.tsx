@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
-export const Route = createFileRoute("/queue")({
+export const Route = createFileRoute("/clinic/queue")({
   head: () => ({ meta: [{ title: "Patient Queue — Dentallogue" }] }),
   component: QueuePage,
 });

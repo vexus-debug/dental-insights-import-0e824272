@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export const Route = createFileRoute("/communication")({
+export const Route = createFileRoute("/clinic/communication")({
   head: () => ({ meta: [{ title: "Communication — Dentallogue" }] }),
   component: CommPage,
 });

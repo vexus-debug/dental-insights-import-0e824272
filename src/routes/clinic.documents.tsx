@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
-export const Route = createFileRoute("/documents")({
+export const Route = createFileRoute("/clinic/documents")({
   head: () => ({ meta: [{ title: "Documents — Dentallogue" }] }),
   component: DocumentsPage,
 });

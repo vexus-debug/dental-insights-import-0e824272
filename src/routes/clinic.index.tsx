@@ -53,7 +53,7 @@ import {
 import { DrillDownPanel } from "@/components/drill-down-panel";
 import type { DrillFilter } from "@/lib/dashboard-drilldown";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/clinic/")({
   head: () => ({
     meta: [
       { title: "Dashboard — Dentallogue" },

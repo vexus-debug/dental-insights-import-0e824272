@@ -7,7 +7,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
-export const Route = createFileRoute("/patient-portal")({
+export const Route = createFileRoute("/clinic/patient-portal")({
   head: () => ({ meta: [{ title: "Patient Portal — Dentallogue" }] }),
   component: PortalPage,
 });
